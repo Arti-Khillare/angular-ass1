@@ -15,7 +15,7 @@
           <div class="navbar-nav" *ngSwitchCase="'default'">
             <a class="nav-link" routerLink="admin-auth">Admin</a>
             <a class="nav-link active" aria-current="page" routerLink="">Home</a>
-            <a class="nav-link" routerLink="user-product">Product</a>
+            <a class="nav-link" routerLink="/user-product">Product</a>
             <a class="nav-link" routerLink="admin-user">Register</a>
             <a class="nav-link" routerLink="login">Login</a>
           </div>
@@ -23,6 +23,12 @@
             <a class="nav-link" routerLink="admin-adduser">Add-User</a>
             <a class="nav-link active" aria-current="page" routerLink="">Home</a>
             <a class="nav-link" href="#">UsersList</a>
+            <a class="nav-link" href="#">{{userName}}</a>
+          </div>
+          <div class="navbar-nav" *ngSwitchCase="'user'">
+            <a class="nav-link" routerLink="user-addproduct">Add-Product</a>
+            <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+            <a class="nav-link" href="#">ProductList</a>
             <a class="nav-link" href="#">{{userName}}</a>
           </div>
         </div>

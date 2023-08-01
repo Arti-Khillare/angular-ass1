@@ -31,8 +31,19 @@
 
 .adjust-edit {
     margin-left: 10px;
+    color : blueviolet;
 }
 
+.adjust-delete {
+    margin-left: 10px;
+    color : blueviolet;
+}
+.adjust-edit:hover {
+    color : blue;
+}
+.adjust-delete:hover {
+    color : red;
+}
 img {
     width : 100px;
     height : 100px;

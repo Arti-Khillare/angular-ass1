@@ -1,0 +1,60 @@
+<p>update-product works!</p>
+<body>
+    <div class="container">
+    <p class="message-p">{{productMsg}}</p>
+      <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+          <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+            <div class="card-body p-4 p-sm-5">
+              <h5 class="card-title text-center mb-5 fw-bold fs-5">Update Product</h5>
+              <form #updateProduct="ngForm" (ngSubmit)="editProduct(updateProduct.value)">
+  
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInputTittle" placeholder="name" name="name" ngModel="{{productData?.name}}" required autofocus>
+                  <label for="floatingInputTittle">Name</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <textarea type="text" class="form-control" id="floatingInputDescription" placeholder="description" name="description" ngModel="{{productData?.description}}"></textarea>
+                    <label for="floatingInputDescription">Description</label>
+                </div>
+  
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInputUserId" placeholder="userId" name="userId" ngModel="{{productData?.userId}}" >
+                  <label for="floatingInputUserId">UserId</label>
+                </div>
+  
+                <hr>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingProductImage" placeholder="productImage" name="productImage" ngModel="{{productData?.productImage}}" >
+                    <label for="floatingProductImage">ProductImage</label>
+                  </div>
+    
+                  <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInputPrice" placeholder="price" name="price" ngModel="{{productData?.price}}" >
+                    <label for="floatingInputPrice">Price</label>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <input type="number" class="form-control" id="floatingInputRating" placeholder="rating" name="rating" ngModel="{{productData?.rating}}" >
+                    <label for="floatingInputRating">Rating</label>
+                  </div>
+
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingInputCreatedBy" placeholder="createdBy" name="createdBy" ngModel="{{productData?.createdBy}}" >
+                    <label for="floatingInputCreatedBy">CreatedBy</label>
+                  </div>
+    
+                  <div class="d-grid mb-2">
+                    <button class="btn btn-lg btn-primary btn-add fw-bold text-uppercase" type="submit">UpdateProduct</button>
+                  </div>
+    
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+  
+

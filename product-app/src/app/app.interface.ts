@@ -22,13 +22,14 @@ interface users {
 }
 
 interface createProduct {
-    name : string,
-    description :  string,
-    userId : string,
-    isPublished : boolean,
-    productImage :  string,
-    price : Number,
-    rating : Number,
+    _id : string;
+    name : string;
+    description :  string;
+    userId : string;
+    isPublished : boolean;
+    productImage :  string;
+    price : Number;
+    rating : Number;
     createdBy : string
 }
 

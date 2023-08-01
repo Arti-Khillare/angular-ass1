@@ -13,7 +13,7 @@
           <div class="navbar-nav">
             <a class="nav-link" routerLink="/user-addproduct">Add-Product</a>
             <a class="nav-link active" aria-current="page" routerLink="">Home</a>
-            <a class="nav-link" routerLink="/user-addproduct">ProductList</a>
+            <a class="nav-link" routerLink="/user-product">ProductList</a>
             <a class="nav-link" href="#">{{userName}}</a>
           </div>
       </div>
@@ -48,8 +48,8 @@
         <td>{{product.rating}}</td>
         <td>{{product.createdBy}}</td>
         <td>
-          <a class="adjust-edit" href="javascript:void(0)" [routerLink]="['/admin-edit-user',product._id]"><fa-icon [icon]="editIcon"></fa-icon></a> / 
-          <fa-icon (click)="deleteProduct(product._id)" [icon]="icon"></fa-icon> 
+          <a class="adjust-edit" href="javascript:void(0)" [routerLink]="['/user-edit-product',product._id]"><fa-icon [icon]="editIcon"></fa-icon></a> / 
+          <fa-icon class="adjust-delete"(click)="deleteProduct(product._id)" [icon]="icon"></fa-icon> 
        </td>
       </tr>
     </tbody>

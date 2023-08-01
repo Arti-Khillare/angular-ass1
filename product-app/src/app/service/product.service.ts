@@ -33,14 +33,25 @@ export class ProductService {
     return this.http.get<createProduct[]>('http://localhost:3000/api/products/',  requestOptions)
   }
 
-  updateProduct(data: any, _id: string) {
+  getProduct(_id: string) {
     let headers = new HttpHeaders({
       'x-access-token': `${localStorage.getItem('token')}`,
-      "role" : `${localStorage.getItem('role')}`
+      "role" : `${localStorage.getItem('role')}`,
+      '_id' : `${localStorage.getItem('_id')}`
+    });
+    let requestOptions = { headers: headers };
+    return this.http.get<createProduct>(`http://localhost:3000/api/products/${_id}`, requestOptions)
+  }
+
+  updateProduct(data: createProduct) {
+    let headers = new HttpHeaders({
+      'x-access-token': `${localStorage.getItem('token')}`,
+      "role" : `${localStorage.getItem('role')}`,
+      '_id' : `${localStorage.getItem('_id')}`
     });
   
     let requestOptions = { headers: headers };
-    return this.http.put(`http://localhost:3000/api/users/${_id}`, data, requestOptions)
+    return this.http.put(`http://localhost:3000/api/products/${data._id}`, data, requestOptions)
   }
 
   deleteProduct(_id: string) {
@@ -52,6 +63,6 @@ export class ProductService {
 
   console.warn(`${localStorage.getItem('_id')}`);
   let requestOptions = { headers: headers };
-  return this.http.delete(`http://localhost:3000/api/users/${_id}`, requestOptions)
+  return this.http.delete(`http://localhost:3000/api/products/${_id}`, requestOptions)
   }
 }

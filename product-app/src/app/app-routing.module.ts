@@ -10,6 +10,7 @@ import { UserComponent } from './user/user.component';
 import { authGuard } from './auth.guard';
 import { ProductComponent } from './product/product.component';
 import { AddProductComponent } from './product/add-product/add-product.component';
+import { UpdateProductComponent } from './product/update-product/update-product.component';
 
 const routes: Routes = [
   { 
@@ -53,6 +54,10 @@ const routes: Routes = [
   {
     component : AddProductComponent,
     path : 'user-addproduct'
+  },
+  {
+    component : UpdateProductComponent,
+    path : 'user-edit-product/:id'
   },
   { 
     component : ErrorComponent,

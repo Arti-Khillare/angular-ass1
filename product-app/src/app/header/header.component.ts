@@ -25,6 +25,14 @@ export class HeaderComponent implements OnInit{
           console.warn("this is admin-section")
           this.menuType="user"
         }
+        else if (localStorage.getItem("user") && val.url.includes("user")){
+          let userStore = localStorage.getItem('user');
+          let userData =  userStore && JSON.parse(userStore);
+          this.userName = userData.email;
+
+          console.warn("this is admin-section")
+          this.menuType="user"
+        }
         else {
           console.warn("outside admin-section")
           this.menuType="default"

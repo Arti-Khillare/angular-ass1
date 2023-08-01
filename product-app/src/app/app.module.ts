@@ -17,6 +17,7 @@ import { UserComponent } from './user/user.component';
 import { ProductComponent } from './product/product.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddProductComponent } from './product/add-product/add-product.component';
+import { UpdateProductComponent } from './product/update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AddProductComponent } from './product/add-product/add-product.component
     AdminHomeComponent,
     UserComponent,
     ProductComponent,
-    AddProductComponent
+    AddProductComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,
