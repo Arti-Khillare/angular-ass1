@@ -13,9 +13,12 @@ export class LoginService {
     this.http.post('http://localhost:3000/api/auth/login', data).subscribe((result : any) => {
       localStorage.setItem("token", result.data.token)
       localStorage.setItem("role", result.data.role)
+      localStorage.setItem("_id", result.data.userId)
+      console.warn( result.data.userId)
       console.warn(result);
-      if(result) {
-        this.router.navigate(['Home'])
+      if(result ) {
+        localStorage.setItem("user", JSON.stringify(result.data))
+        this.router.navigate(['admin-home'])
       }
     })
   }

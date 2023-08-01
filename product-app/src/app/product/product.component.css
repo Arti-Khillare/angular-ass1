@@ -1,0 +1,39 @@
+.navbar-brand {
+    color : #f3f33f
+}
+
+.nav-link:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.container-fluid, .table, table {
+    text-align: left;
+    color : blueviolet;
+    border-collapse: collapse;
+}
+
+.table, table th , table td {
+    border : 1px solid blueviolet;
+    padding : 10px;
+    min-width: 160pxs;
+}
+
+.table, table th {
+    background-color: lightblue;
+    text-align: center;
+    color : blueviolet;
+}
+
+.message-p {
+    color : red;
+}
+
+.adjust-edit {
+    margin-left: 10px;
+}
+
+img {
+    width : 100px;
+    height : 100px;
+}

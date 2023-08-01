@@ -9,6 +9,8 @@ import { RegisterService } from 'src/app/service/register.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit{
+  showLogin = false;
+  createdUserMessage : string | undefined;
   constructor( private user : RegisterService , private router : Router) {
 
   }
@@ -16,6 +18,22 @@ export class RegisterComponent implements OnInit{
 
   signUp(data : signUp) : void{
     console.warn(data)
-    this.user.signUpUser(data)
+    this.user.signUpUser(data).subscribe((result) => {
+      console.warn(result);
+      if(result){
+        this.router.navigate(['home'])
+      }
+    })
+    if(data){
+      this.createdUserMessage = "User created successfully"
+    }
+      
+  }
+
+  openSignIn() {
+    this.showLogin = true
+  }
+  openSignUp() {
+    this.showLogin = false
   }
 }

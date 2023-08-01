@@ -1,5 +1,5 @@
 <body>
-    <div class="container">
+    <div *ngIf="showLogin" class="container">
         <div class="row">
             <div class="col-lg-10 col-xl-9 mx-auto">
                 <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
@@ -17,6 +17,8 @@
                             <div class="d-grid mb-2">
                             <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Sign In</button> 
                             </div>
+                            
+                           <a class="d-block text-center mt-2 small" (click)="openSignUp()" href="register">Don't Have account? Sign Up</a>
                         </form>
                     </div>
                 </div>
@@ -24,3 +26,7 @@
         </div>
     </div>
 </body>
+
+
+                                
+             

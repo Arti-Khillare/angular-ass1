@@ -1,0 +1,47 @@
+<body>
+  <div class="container">
+    <p class="message-p">{{userMsg}}</p>
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+          <div class="card-body p-4 p-sm-5">
+            <h2 class="card-title text-center mb-5 text-success fw-bold fs-5">Update User Details</h2>
+            <form #userUpdate="ngForm" (ngSubmit)="update(userUpdate.value)">
+
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInputfirstname" placeholder="firstname" name="fname"         ngModel="{{userData?.fname}}" required autofocus/>
+                <label for="floatingInputfirstname">Firstname</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInputlastname" placeholder="lastname" name="lname" ngModel="{{userData?.lname}}" required autofocus />
+                  <label for="floatingInputlastname">Lastname</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@mail.com" name="email" ngModel="{{userData?.email}}"/>
+                <label for="floatingInputEmail">Email address</label>
+              </div>
+
+              <hr>
+              <div class="form-floating mb-3">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" ngModel="{{userData?.password}}"/>
+                  <label for="floatingPassword">Password</label>
+                </div>
+  
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInputRole" placeholder="Role" name="role" ngModel="{{userData?.role}}"/>
+                  <label for="floatingInputRole">Role</label>
+                </div>
+  
+                <div class="d-grid mb-2">
+                  <button class="btn btn-lg btn-primary btn-update fw-bold text-uppercase" type="submit" >Edit User</button>
+                </div>
+              </form>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+

@@ -9,15 +9,24 @@ import { LoginService } from 'src/app/service/login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit{
-
+  showLogin = true
   constructor(private user: LoginService) {
 
   }
 
-  ngOnInit() :void {}
+  ngOnInit() :void { }
+
 
   signIn(data: signIn) : void {
       console.warn(data);
       this.user.loginUser(data)
   }
+
+  openSignIn() {
+    this.showLogin = true
+  }
+  openSignUp() {
+    this.showLogin = false
+  }
+
 }

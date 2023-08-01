@@ -10,8 +10,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { AdminAuthComponent } from './admin-auth/admin-auth.component';
 import { ErrorComponent } from './error/error.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { UserComponent } from './user/user.component';
+import { ProductComponent } from './product/product.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AddProductComponent } from './product/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +26,20 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     HomeComponent,
     AdminAuthComponent,
-    ErrorComponent
+    ErrorComponent,
+    AdminHomeComponent,
+    UserComponent,
+    ProductComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule
+    FormsModule, 
+    ReactiveFormsModule,
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

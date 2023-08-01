@@ -21,9 +21,8 @@ export class RegisterService {
     });
 
     let requestOptions = { headers: headers };
-    return this.http.post('http://localhost:3000/api/users/', data, requestOptions).subscribe((result : any) => {
-      console.log(result)
-    }) 
+    return this.http.post('http://localhost:3000/api/users/', data, requestOptions)
   }
+
 }
 

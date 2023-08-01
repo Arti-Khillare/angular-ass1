@@ -1,0 +1,44 @@
+.navbar-brand {
+    color : #f3f33f
+}
+
+.nav-link:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.container-fluid, .table, table {
+    text-align: left;
+    color : blueviolet;
+    border-collapse: collapse;
+}
+
+.table, table th , table td {
+    border : 1px solid blueviolet;
+    padding : 10px;
+    min-width: 160pxs;
+}
+
+.table, table th {
+    background-color: lightblue;
+    text-align: center;
+    color : blueviolet;
+}
+
+.message-p {
+    color : red;
+}
+
+.adjust-edit {
+    margin-left: 10px;
+    color : blueviolet;
+}
+.adjust-delete {
+    color : blueviolet;
+}
+.adjust-edit:hover {
+    color : rgb(81, 180, 251);
+}
+.adjust-delete:hover {
+    color : red;
+}

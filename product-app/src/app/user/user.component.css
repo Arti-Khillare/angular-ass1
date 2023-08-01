@@ -3,14 +3,14 @@ body {
 }
 
 .container {
-    width : 50%;
+    width : 45%;
 }
-.btn-login {
+.btn-update {
     font-size: 0.9rem;
     letter-spacing: 0.05rem;
     padding: 0.75rem 1rem;
 }
-.message-p{
-    color : greenyellow;
-    text-align: center;
+
+.message-p {
+    color : rgb(82, 246, 82);
 }

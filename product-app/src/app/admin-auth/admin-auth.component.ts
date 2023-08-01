@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-auth.component.css']
 })
 export class AdminAuthComponent implements OnInit {
-
+  showLogin = true
   constructor(private user : AdminService, private router : Router) {
 
   }
