@@ -34,6 +34,7 @@
         <th scope="col">Price</th>
         <th scope="col">Rating</th>
         <th scope="col">Creator</th>
+        <th scope="col">Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -49,7 +50,9 @@
         <td>{{product.createdBy}}</td>
         <td>
           <a class="adjust-edit" href="javascript:void(0)" [routerLink]="['/user-edit-product',product._id]"><fa-icon [icon]="editIcon"></fa-icon></a> / 
-          <fa-icon class="adjust-delete"(click)="deleteProduct(product._id)" [icon]="icon"></fa-icon> 
+          <fa-icon class="adjust-delete"(click)="deleteProduct(product._id)" [icon]="icon"></fa-icon> /
+          <fa-icon class="adjust-edit" (click)="getPublishedProduct(product.isPublished)" [icon]="filterIcon "></fa-icon> /
+          <fa-icon class="adjust-edit" (click)="getProductByName(product.name)" [icon]="searchIcon "></fa-icon> 
        </td>
       </tr>
     </tbody>
