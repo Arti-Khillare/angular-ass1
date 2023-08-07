@@ -11,6 +11,11 @@ import { RegisterService } from 'src/app/service/register.service';
 export class RegisterComponent implements OnInit{
   showLogin = false;
   createdUserMessage : string | undefined;
+  "fname" : string;
+  "lname" :  string;
+  "email" :  string;
+  "password" : string;
+  "role" : string;
   constructor( private user : RegisterService , private router : Router) {
 
   }

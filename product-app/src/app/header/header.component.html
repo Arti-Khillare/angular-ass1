@@ -21,14 +21,14 @@
           </div>
           <div class="navbar-nav" *ngSwitchCase="'admin'">
             <a class="nav-link" routerLink="admin-adduser">Add-User</a>
-            <a class="nav-link active" aria-current="page" routerLink="">Home</a>
-            <a class="nav-link" href="#">UsersList</a>
+            <a class="nav-link active" aria-current="page" routerLink="/admin-home">Home</a>
+            <a class="nav-link" href="/admin-home">UsersList</a>
             <a class="nav-link" href="#">{{userName}}</a>
           </div>
           <div class="navbar-nav" *ngSwitchCase="'user'">
             <a class="nav-link" routerLink="user-addproduct">Add-Product</a>
-            <a class="nav-link active" aria-current="page" routerLink="">Home</a>
-            <a class="nav-link" href="#">ProductList</a>
+            <a class="nav-link active" aria-current="page" routerLink="user-product">Home</a>
+            <a class="nav-link" href="/user-product">ProductList</a>
             <a class="nav-link" href="#">{{userName}}</a>
           </div>
         </div>

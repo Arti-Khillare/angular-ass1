@@ -9,7 +9,10 @@ import { LoginService } from 'src/app/service/login.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit{
+  errorMessage : string = "";
   showLogin = true
+  "email" : string;
+  "password" : string;
   constructor(private user: LoginService) {
 
   }
@@ -19,7 +22,12 @@ export class LoginComponent implements OnInit{
 
   signIn(data: signIn) : void {
       console.warn(data);
-      this.user.loginUser(data)
+      if(data) {
+        this.user.loginUser(data)
+      }
+      if((data.email != "email") || (data.password != "password")){
+      this.errorMessage = 'login failed checked email or password'
+      }
   }
 
   openSignIn() {

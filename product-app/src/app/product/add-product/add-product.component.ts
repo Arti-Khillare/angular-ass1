@@ -10,6 +10,13 @@ import { ProductService } from 'src/app/service/product.service';
 export class AddProductComponent {
   
   createdProductMessage : string | undefined;
+  "name" : string;
+  "description" : string;
+  "userId" : string;
+  "productImage" : string;
+  "price" : number;
+  "rating" : number;
+  "createdBy" : string
 
   constructor (private product : ProductService) {}
 

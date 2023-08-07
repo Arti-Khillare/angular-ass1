@@ -9,29 +9,44 @@
               <form #userSignUp="ngForm" (ngSubmit)="signUp(userSignUp.value)">
   
                 <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInputfirstname" placeholder="firstname" name="fname" ngModel required autofocus>
+                  <input type="text" class="form-control" id="floatingInputfirstname" placeholder="firstname" name="fname" [(ngModel)]="fname" #floatingInputfirstname="ngModel" required>
                   <label for="floatingInputfirstname">Firstname</label>
+                  <div>
+                    <p class="text-danger" *ngIf="floatingInputfirstname.invalid && floatingInputfirstname.touched">firstname is required</p>
+                  </div>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInputlastname" placeholder="lastname" name="lname" ngModel required autofocus >
+                    <input type="text" class="form-control" id="floatingInputlastname" placeholder="lastname" name="lname" [(ngModel)]="lname" #floatingInputlastname="ngModel" required>
                     <label for="floatingInputlastname">Lastname</label>
+                    <div>
+                      <p class="text-danger" *ngIf="floatingInputlastname.invalid && floatingInputlastname.touched">lastname is required</p>
+                    </div>
                   </div>
   
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@mail.com" name="email" ngModel>
+                  <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@mail.com" name="email" [(ngModel)]="email" #floatingInputEmail="ngModel" required>
                   <label for="floatingInputEmail">Email address</label>
+                  <div>
+                    <p class="text-danger" *ngIf="floatingInputEmail.invalid && floatingInputEmail.touched">email is required</p>
+                  </div>
                 </div>
   
                 <hr>
                 <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" ngModel>
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" [(ngModel)]="password" #floatingPassword="ngModel" required>
                     <label for="floatingPassword">Password</label>
+                    <div>
+                      <p class="text-danger" *ngIf="floatingPassword.invalid && floatingPassword.touched">password is required</p>
+                    </div>
                   </div>
     
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInputRole" placeholder="Role" name="role" ngModel>
+                    <input type="text" class="form-control" id="floatingInputRole" placeholder="Role" name="role" [(ngModel)]="role" #floatingInputRole="ngModel" required>
                     <label for="floatingInputRole">Role</label>
+                    <div>
+                      <p class="text-danger" *ngIf="floatingInputRole.invalid && floatingInputRole.touched">role is required</p>
+                    </div>
                   </div>
     
                   <div class="d-grid mb-2">

@@ -1,13 +1,14 @@
 <body>
   <div class="container">
     <p class="message-p">{{userMsg}}</p>
+    <p class="emessage-p">{{errorMessage}}</p>
     <div class="row">
       <div class="col-lg-10 col-xl-9 mx-auto">
         <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
           <div class="card-body p-4 p-sm-5">
             <h2 class="card-title text-center mb-5 text-success fw-bold fs-5">Update User Details</h2>
-            <form #userUpdate="ngForm" (ngSubmit)="update(userUpdate.value)">
-
+            <form #userUpdate="ngForm" (ngSubmit)="update(userUpdate.value)" *ngIf="!errorMessage">
+              
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="floatingInputfirstname" placeholder="firstname" name="fname"         ngModel="{{userData?.fname}}" required autofocus/>
                 <label for="floatingInputfirstname">Firstname</label>

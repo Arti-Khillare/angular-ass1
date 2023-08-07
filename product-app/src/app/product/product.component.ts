@@ -9,7 +9,7 @@ import { ProductService } from '../service/product.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit{
-  userName : string = "User";
+  userName : string = "Users";
   productMsg : undefined | string = '';
   createdProductMessage : string | undefined;
   productData : undefined | createProduct;

@@ -12,7 +12,6 @@ import { Router } from '@angular/router';
 export class AdminHomeComponent implements OnInit{
   userName : string = "ADMIN";
   userMsg : undefined | string = '';
-  //userList : undefined | users[]
   userList : any;
   icon = faTrash;
   editIcon = faEdit;
@@ -50,16 +49,5 @@ export class AdminHomeComponent implements OnInit{
       }, 3000)
     }
   }
-//}
-  // deleteUser(_id : string) {
-  //   console.warn(_id)
-  //   if(confirm ('Do you really want to delete this record')) {
-  //     this.userService.deleteUser(_id)
-  //       this.getAllUsers();
-  //       console.warn('deletedId', _id)
-      
-  //   }
-  // }
-
 }
 

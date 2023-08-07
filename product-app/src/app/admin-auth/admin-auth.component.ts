@@ -10,6 +10,11 @@ import { Router } from '@angular/router';
 })
 export class AdminAuthComponent implements OnInit {
   showLogin = true
+  "fname" : string;
+  "lname" : string;
+  "email" : string;
+  "password" : string;
+  "role" : string;
   constructor(private user : AdminService, private router : Router) {
 
   }

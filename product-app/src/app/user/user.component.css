@@ -14,3 +14,7 @@ body {
 .message-p {
     color : rgb(82, 246, 82);
 }
+
+.emessage-p {
+    color : red;
+}

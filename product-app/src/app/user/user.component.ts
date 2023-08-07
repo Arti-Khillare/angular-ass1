@@ -41,18 +41,8 @@ export class UserComponent implements OnInit {
 //       }
 //     });
 //  }
-  // update(data : any) {
-  //   console.warn(data)
-  //   this.user.updateUser(data ).subscribe((result) => {
-  //     console.warn(result)
-  //     if(result){
-  //       this.userMsg = 'User updated successfully'
-  //     }
-  //   });
-  //   setTimeout(() => {
-  //     this.userMsg=undefined
-  //   }, 3000)
-  // }
+  
+ 
 
   update(data: users) {
     console.warn(data)
@@ -63,7 +53,10 @@ export class UserComponent implements OnInit {
           console.warn(result)
           if(result){
             this.userMsg = 'User updated successfully'
-      }
+          }
+    }, (err) => {
+      this.errorMessage = 'User not authorized'
+      
     });
     setTimeout(() => {
           this.userMsg=undefined
