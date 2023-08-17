@@ -21,6 +21,9 @@ import { UpdateProductComponent } from './product/update-product/update-product.
 import { SearchComponent } from './search/search.component';
 import { UploadComponent } from './upload/upload.component';
 import { SearchPipe } from './search.pipe';
+import { 
+   AuthGuard 
+} from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -47,9 +50,10 @@ import { SearchPipe } from './search.pipe';
     FormsModule, 
     ReactiveFormsModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

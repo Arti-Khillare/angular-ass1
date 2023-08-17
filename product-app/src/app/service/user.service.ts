@@ -1,17 +1,24 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http'
 import { signUp, urlParam, users } from '../app.interface';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  private userSubject: BehaviorSubject<users | null>;
+  public user: Observable<users | null>;
   isUserLoggedIn = new BehaviorSubject<boolean>(false)
 
-  constructor( private http : HttpClient, private router :  Router) { }
-
+  constructor( private http : HttpClient, private router :  Router) { 
+    this.userSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('user')!));
+    this.user = this.userSubject.asObservable();
+  }
+  public get userValue() {
+    return this.userSubject.value;
+  }
   signUpUser(data : signUp) {
     let headers = new HttpHeaders({
       'x-access-token': `${localStorage.getItem('token')}`,

@@ -7,7 +7,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { UserComponent } from './user/user.component';
-import { authGuard } from './auth.guard';
+import {  AuthGuard } from './auth.guard';
 import { ProductComponent } from './product/product.component';
 import { AddProductComponent } from './product/add-product/add-product.component';
 import { UpdateProductComponent } from './product/update-product/update-product.component';
@@ -19,11 +19,7 @@ const routes: Routes = [
     path : '', 
     redirectTo: 'login', 
     pathMatch : 'full'
-  },//main-home
-  // {
-  //   component : HomeComponent,
-  //   path : ''
-  // },
+  },
   {
     component : HomeComponent,
     path : 'home'
@@ -38,7 +34,8 @@ const routes: Routes = [
   },//login
   {
     component : RegisterComponent,
-    path : 'admin-user'
+    path : 'admin-user',
+    canActivate : [AuthGuard]
   },//adding user after adminaccess
   // {
   //   component : AdminHomeComponent,
@@ -46,16 +43,18 @@ const routes: Routes = [
   // },//main for user
   {
     path : 'admin-home',
-    loadChildren : () => import('./admin-home/admin-home/admin-home.module').then((adm) => adm.AdminHomeModule)
+    loadChildren : () => import('./admin-home/admin-home/admin-home.module').then((adm) => adm.AdminHomeModule),
+    canActivate : [AuthGuard]
   },
   {
     component : UserComponent,
     path : 'admin-edit-user/:id',
-    canActivate : [authGuard]
+    canActivate : [AuthGuard]
   },//update user
   {
     component : ProductComponent,
-    path : 'user-product'
+    path : 'user-product',
+    canActivate : [AuthGuard]
   },
   {
     component : AddProductComponent,

@@ -32,6 +32,8 @@ export class LoginComponent implements OnInit{
       }
   }
 
+  
+
   openSignIn() {
     this.showLogin = true
   }

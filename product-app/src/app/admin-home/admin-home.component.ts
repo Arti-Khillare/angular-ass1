@@ -47,5 +47,9 @@ export class AdminHomeComponent implements OnInit{
       }, 3000)
     }
   }
+
+  logout(){
+    localStorage.clear()
+  }
 }
 
