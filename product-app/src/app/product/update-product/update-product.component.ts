@@ -9,6 +9,7 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./update-product.component.css']
 })
 export class UpdateProductComponent implements OnInit {
+  userName : undefined | string = 'USER'
   productData : undefined | createProduct
   productMsg : undefined | string = ''
   constructor(private product : ProductService, private route : ActivatedRoute) {}

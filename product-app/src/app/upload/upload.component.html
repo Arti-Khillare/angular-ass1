@@ -1,0 +1,37 @@
+<!--<form action="/add" method="post" enctype="multipart/form-data" >
+    <div class="text-center"><input type="file" (change)="onChange($event)" id="photo" name="photo"/>
+    <button (click)="onUpload()" class= "btn btn-success" id="Button1" routerLink="/user-product">Upload</button>
+    </div>
+    <div class="container text-center" *ngIf="shortlink">
+        <h2>Visit here</h2>
+        <a href="{{shortlink}}">{{shortlink}}</a>
+    </div>
+    <div class="container" *ngIf="loading">
+        <h3>loading data</h3>
+    </div>
+</form>-->
+<div class="container">
+    <div class="card" style="width: 25rem;">
+        <img class="card-img-top" src="https://m.media-amazon.com/images/I/71Ftzmh3XWL._SL1500_.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Add Product details</h5>
+          <p class="card-text text-center">To add the product details in the sheet, please click on download sheet button to open the sheet file</p>
+          <div id="btn1">
+            <button  type="button" class="btn btn-primary"  onclick="window.open('http://localhost:3000/api/products/upload/product/')">DownLoad Sheet</button>
+        </div>
+        </div>
+        <form action="/add" method="post" enctype="multipart/form-data" >
+            <div class="text-center"><input type="file" (change)="onChange($event)" id="photo" name="photo"/>
+            <button  (click)="onUpload()" class= "btn btn-success" id="Button1" routerLink="/user-product">Upload</button>
+            </div>
+            <div class="container text-center" *ngIf="shortlink">
+                <h2>Visit here</h2>
+                <a href="{{shortlink}}">{{shortlink}}</a>
+            </div>
+            <div class="container" *ngIf="loading">
+                <h3>loading data</h3>
+            </div>
+        </form>
+      </div>
+</div>
+

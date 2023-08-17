@@ -55,17 +55,6 @@ export class UserService {
   let requestOptions = { headers: headers };
   return this.http.get<users>(`http://localhost:3000/api/users/${_id}`, requestOptions)
   }
-  
-  // updateUser(data: users, _id : string) {
-  //   let headers = new HttpHeaders({
-  //     'x-access-token': `${localStorage.getItem('token')}`,
-  //     "role" : `${localStorage.getItem('role')}`,
-  //     '_id' : `${localStorage.getItem('_id')}`
-  //   });
-  
-  //   let requestOptions = { headers: headers };
-  //   return this.http.put(`http://localhost:3000/api/users/${_id}`, data, requestOptions)
-  // }
 
   updateUser(users: users) {
     console.warn(users)

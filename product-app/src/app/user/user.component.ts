@@ -28,20 +28,6 @@ export class UserComponent implements OnInit {
       console.warn(result.data._id)
     })
   }
-
-//   update(data : users, _id : string) {
-//     console.warn(data)
-//     this.user.updateUser(data, _id).subscribe((result:any) => {
-//       let info = result.data
-//       console.warn(info._id)
-//       console.warn(info)
-//       console.warn(result)
-//       if(result){
-//         this.userMsg = 'User updated successfully'
-//       }
-//     });
-//  }
-  
  
 
   update(data: users) {
@@ -54,10 +40,7 @@ export class UserComponent implements OnInit {
           if(result){
             this.userMsg = 'User updated successfully'
           }
-    }, (err) => {
-      this.errorMessage = 'User not authorized'
-      
-    });
+    },);
     setTimeout(() => {
           this.userMsg=undefined
     }, 3000)

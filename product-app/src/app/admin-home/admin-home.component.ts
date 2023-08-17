@@ -16,9 +16,7 @@ export class AdminHomeComponent implements OnInit{
   icon = faTrash;
   editIcon = faEdit;
 
-  constructor( private userService : UserService, private router : Router){
-
-  }
+  constructor( private userService : UserService, private router : Router){}
   ngOnInit() : void{
     this.getAllUsers();
   }

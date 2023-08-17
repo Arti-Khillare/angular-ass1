@@ -1,5 +1,8 @@
+a{
+    font-family: 'Roboto Condensed', sans-serif;
+}
 .navbar-brand {
-    color : #f3f33f
+    color : blueviolet
 }
 
 .nav-link:hover {
@@ -9,20 +12,19 @@
 
 .container-fluid, .table, table {
     text-align: left;
-    color : blueviolet;
     border-collapse: collapse;
 }
 
 .table, table th , table td {
-    border : 1px solid blueviolet;
+    font-family: 'Poppins', sans-serif;
+    border : 1px solid #c7ecee;
     padding : 10px;
-    min-width: 160pxs;
+    min-width: 160pxs
 }
 
 .table, table th {
     background-color: lightblue;
     text-align: center;
-    color : blueviolet;
 }
 
 .message-p {
@@ -31,14 +33,19 @@
 
 .adjust-edit {
     margin-left: 10px;
-    color : blueviolet;
+    color : #32ff7e;
 }
 .adjust-delete {
-    color : blueviolet;
+    color : #32ff7e;
 }
 .adjust-edit:hover {
     color : rgb(81, 180, 251);
 }
 .adjust-delete:hover {
     color : red;
+}
+
+.container-fluid button {
+   margin-left: 70rem;
+   border: #c7ecee;
 }

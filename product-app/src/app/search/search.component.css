@@ -1,0 +1,19 @@
+*{
+    margin :0px;
+    padding : 0px;
+}
+.main{
+    width : 330px;
+    border : 2px solid blue;
+    padding : 04px;
+    border-radius: 30px;
+}
+input {
+    background: transparent;
+    outline : 0px;
+    border : 0px;
+    width : 300px
+}
+input[type]{
+    padding-left: 08px;
+}

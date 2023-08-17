@@ -1,10 +1,20 @@
 @import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 .navbar-brand {
-    color : #f3f33f
+    color :blueviolet
 }
 
 .nav-link:hover {
     color: blue;
     cursor: pointer;
+}
+.nav-link {
+    color: black;
+}
+
+.container-fluid {
+    background-color: whitesmoke
+}
+a {
+    font-family: 'Roboto Condensed', sans-serif;
 }

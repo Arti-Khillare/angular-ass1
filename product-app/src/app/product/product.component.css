@@ -1,5 +1,5 @@
 .navbar-brand {
-    color : #f3f33f
+    color : blueviolet
 }
 
 .nav-link:hover {
@@ -9,20 +9,17 @@
 
 .container-fluid, .table, table {
     text-align: left;
-    color : blueviolet;
     border-collapse: collapse;
 }
 
 .table, table th , table td {
-    border : 1px solid blueviolet;
+    font-family: 'Poppins', sans-serif;
     padding : 10px;
-    min-width: 160pxs;
+    min-width: 120pxs;
 }
 
 .table, table th {
-    background-color: lightblue;
     text-align: center;
-    color : blueviolet;
 }
 
 .message-p {
@@ -48,3 +45,30 @@ img {
     width : 100px;
     height : 100px;
 }
+.form-control{
+    background-color: #ecf0f1;
+    margin-left: 45rem;
+}
+.container-fluid button {
+    border: #c7ecee;
+ }
+.main{
+    width : 330px;
+    border : 2px solid blue;
+    padding : 04px;
+    border-radius: 30px;
+}
+input {
+    background: transparent;
+    outline : 0px;
+    border : 0px;
+    width : 300px
+}
+input[type]{
+    padding-left: 08px;
+}
+.search-icon{
+    padding-right: 2.1px;
+}
+
+     

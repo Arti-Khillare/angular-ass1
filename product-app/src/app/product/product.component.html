@@ -17,42 +17,40 @@
             <a class="nav-link" href="/admin-home">{{userName}}</a>
           </div>
       </div>
+      <div class="main">
+        <input type="search" placeholder="Search..." [(ngModel)]="searchText">
+        <fa-icon class="search-icon" (click)="getProductByName(productList.searchText)" [icon]="searchIcon"></fa-icon>
+      </div>
     </div>
   </nav>
   <div class="container-fluid table-responsive-sm">
-  <h2>Product List</h2>
+  <button class="btn btn-primary text-center" routerLink="/user-upload">UploadCsv</button>
   <p class="message-p">{{productMsg}}</p>
-  <table class="table table-hover">
+  <table class="table table-light table-hover table-striped">
     <thead class="thead-light">
       <tr>
         <th scope="col">ProductImage</th>
-        <th scope="col">ProductId</th>
         <th scope="col">ProductName</th>
         <th scope="col">Description</th>
-        <th scope="col">UserId</th>
         <th scope="col">Published</th>
         <th scope="col">Price</th>
         <th scope="col">Rating</th>
-        <th scope="col">Creator</th>
         <th scope="col">Actions</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let product of productList ">
+      <tr *ngFor="let product of productList  | search : searchText">
         <td><img src="{{product.productImage}}"/></td>
-        <td>{{product._id}}</td>
         <td>{{product.name}}</td>
         <td>{{product.description}}</td>
-        <td>{{product.userId}}</td>
         <td>{{product.isPublished}}</td>
         <td>{{product.price}}</td>
         <td>{{product.rating}}</td>
-        <td>{{product.createdBy}}</td>
         <td>
           <a class="adjust-edit" href="javascript:void(0)" [routerLink]="['/user-edit-product',product._id]"><fa-icon [icon]="editIcon"></fa-icon></a> / 
-          <fa-icon class="adjust-delete"(click)="deleteProduct(product._id)" [icon]="icon"></fa-icon> /
-          <fa-icon class="adjust-edit" (click)="getPublishedProduct(product.isPublished)" [icon]="filterIcon "></fa-icon> /
-          <fa-icon class="adjust-edit" (click)="getProductByName(product.name)" [icon]="searchIcon "></fa-icon> 
+          <fa-icon class="adjust-delete"(click)="deleteProduct(product._id)" [icon]="icon"></fa-icon> 
+          <!--<fa-icon class="adjust-edit" (click)="getPublishedProduct(product.isPublished)" [icon]="filterIcon "></fa-icon> /
+           <fa-icon class="adjust-edit" (click)="getProductByName(product.name)" [icon]="searchIcon "></fa-icon> -->
        </td>
       </tr>
     </tbody>

@@ -5,11 +5,15 @@
             <div class="col-lg-10 col-xl-9 mx-auto">
                 <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
                     <div class="card-body p-4 p-sm-5">
+                        <!--<div class="text-center">
+                            <fa-icon [icon]="faLock" class="fa-3x"></fa-icon>
+                        </div>-->
                         <h5 class="card-title text-center mb-5 fw-bold fs-5">SignIn</h5>
+                        <!--<p style="color:lightslategray; text-align: center; ">Please, Enter your login details</p>-->
                         <form  #userLogin="ngForm" (ngSubmit)="signIn(userLogin.value)" *ngIf="!errorMessage">
                             <div class="form-floating mb-3">
                                 <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@mail.com"   name="email" [(ngModel)]="email" required #floatingInputEmail="ngModel" >
-                                <label for="floatingInputEmail">Email address</label>
+                                <label for="floatingInputEmail" >Email address</label>
                                 <div>
                                     <p class="text-danger" *ngIf="floatingInputEmail.invalid && floatingInputEmail.touched">email is required</p>
                                 </div>
@@ -25,7 +29,7 @@
                             <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Sign In</button> 
                             </div>
                             
-                           <a class="d-block text-center mt-2 small" (click)="openSignUp()" href="register">Don't Have account? Sign Up</a>
+                           <a class="d-block text-center mt-2 small" (click)="openSignUp()" routerLink="../admin-user">Don't Have account? Sign Up</a>
                         </form>
                     </div>
                 </div>

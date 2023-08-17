@@ -11,11 +11,13 @@ import { authGuard } from './auth.guard';
 import { ProductComponent } from './product/product.component';
 import { AddProductComponent } from './product/add-product/add-product.component';
 import { UpdateProductComponent } from './product/update-product/update-product.component';
+import { UploadComponent } from './upload/upload.component';
+import { AdminHomeModule } from './admin-home/admin-home/admin-home.module';
 
 const routes: Routes = [
   { 
     path : '', 
-    redirectTo: 'home', 
+    redirectTo: 'login', 
     pathMatch : 'full'
   },//main-home
   // {
@@ -38,10 +40,14 @@ const routes: Routes = [
     component : RegisterComponent,
     path : 'admin-user'
   },//adding user after adminaccess
+  // {
+  //   component : AdminHomeComponent,
+  //   path : 'admin-home'
+  // },//main for user
   {
-    component : AdminHomeComponent,
-    path : 'admin-home'
-  },//main for user
+    path : 'admin-home',
+    loadChildren : () => import('./admin-home/admin-home/admin-home.module').then((adm) => adm.AdminHomeModule)
+  },
   {
     component : UserComponent,
     path : 'admin-edit-user/:id',
@@ -58,6 +64,10 @@ const routes: Routes = [
   {
     component : UpdateProductComponent,
     path : 'user-edit-product/:id'
+  },
+  {
+    component : UploadComponent,
+    path : 'user-upload'
   },
   { 
     component : ErrorComponent,

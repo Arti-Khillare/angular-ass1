@@ -2,15 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { signIn } from '../app.interface';
 import { Router } from '@angular/router';
+import { BaseService } from './base.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor( private http : HttpClient, private router : Router) { }
+  constructor( private http : HttpClient, private router : Router, private base : BaseService) { }
   loginUser(data : signIn){
-    this.http.post('http://localhost:3000/api/auth/login', data).subscribe((result : any) => {
+    this.base.basepath
+    this.http.post(`${this.base.basepath}auth/login`, data).subscribe((result : any) => {
       localStorage.setItem("token", result.data.token)
       localStorage.setItem("role", result.data.role)
       localStorage.setItem("_id", result.data.userId)
@@ -24,12 +26,3 @@ export class LoginService {
   }
 }
 
-//loginUser(data : signIn){
-//   this.http.post('http://localhost:3000/api/auth/login', data).subscribe((result : any) => {
-//     localStorage.setItem("token", result.data.token)
-//     console.warn(result);
-//     if(result) {
-//       this.router.navigate(['Home'])
-//     }
-//   })
-// }

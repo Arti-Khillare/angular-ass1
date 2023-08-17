@@ -11,7 +11,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" routerLink="/admin-user">Add-User</a>
             <a class="nav-link active" aria-current="page" routerLink="/admin-home">Home</a>
             <a class="nav-link" routerLink="/admin-home">UsersList</a>
             <a class="nav-link" href="#">{{userName}}</a>
@@ -20,27 +19,22 @@
     </div>
   </nav>
   <div class="container-fluid table-responsive-sm">
-  <h2>Users List</h2>
+  <h3>Users <span>
+    <button class="btn btn-primary" routerLink="/admin-user">+ Add Users</button></span></h3>
   <p class="message-p">{{userMsg}}</p>
   <table class="table table-hover">
     <thead class="thead-light">
       <tr>
-        <th scope="col">UserId</th>
-        <th scope="col">FirstName</th>
-        <th scope="col">LastName</th>
+        <th scope="col">Username</th>
         <th scope="col">Email</th>
-        <th scope="col">Password</th>
         <th scope="col">Role</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let user of userList ">
-        <td>{{user._id}}</td>
-        <td>{{user.fname}}</td>
-        <td>{{user.lname}}</td>
+        <td>{{user.fname}}   {{user.lname}}</td>
         <td>{{user.email}}</td>
-        <td>{{user.password}}</td>
         <td>{{user.role}}</td>
         <td>
           <a class="adjust-edit" href="javascript:void(0)" [routerLink]="['/admin-edit-user',user._id]"><fa-icon [icon]="editIcon"></fa-icon></a> / 

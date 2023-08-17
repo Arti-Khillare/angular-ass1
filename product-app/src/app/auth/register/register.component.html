@@ -1,11 +1,12 @@
 <body>
+  <app-header></app-header>
     <div *ngIf="!showLogin" class="container">
       <div class="row">
         <div class="col-lg-10 col-xl-9 mx-auto">
           <p class="message-p">{{createdUserMessage}}</p>
           <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
             <div class="card-body p-4 p-sm-5">
-              <h5 class="card-title text-center mb-5 fw-bold fs-5">Register Now</h5>
+              <h5 class="card-title text-center mb-5 fw-bold fs-5">Add User</h5>
               <form #userSignUp="ngForm" (ngSubmit)="signUp(userSignUp.value)">
   
                 <div class="form-floating mb-3">
@@ -50,7 +51,7 @@
                   </div>
     
                   <div class="d-grid mb-2">
-                    <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit" >Register</button>
+                    <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit" >Add</button>
                   </div>
     
                   <a class="d-block text-center mt-2 small" (click)="openSignIn()" href="login" >Have an account? Sign In</a>

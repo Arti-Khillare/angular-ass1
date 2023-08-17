@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit{
     this.user.signUpUser(data).subscribe((result) => {
       console.warn(result);
       if(result){
-        this.router.navigate(['home'])
+        this.router.navigate(['admin-home'])
       }
     })
     if(data){

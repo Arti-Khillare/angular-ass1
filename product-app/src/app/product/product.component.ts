@@ -9,11 +9,12 @@ import { ProductService } from '../service/product.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit{
+  searchText : string = '';
   userName : string = "Users";
   productMsg : undefined | string = '';
   createdProductMessage : string | undefined;
   productData : undefined | createProduct;
-  productList : any;
+  productList :  any;
   icon = faTrash;
   editIcon = faEdit;
   filterIcon = faFilter;
@@ -67,5 +68,9 @@ export class ProductComponent implements OnInit{
     setTimeout(() => {
           this.productMsg = undefined
     }, 3000)
+  }
+
+  getdownloadCSV() {
+    console.warn('click')
   }
 }

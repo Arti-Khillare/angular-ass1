@@ -18,6 +18,9 @@ import { ProductComponent } from './product/product.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddProductComponent } from './product/add-product/add-product.component';
 import { UpdateProductComponent } from './product/update-product/update-product.component';
+import { SearchComponent } from './search/search.component';
+import { UploadComponent } from './upload/upload.component';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { UpdateProductComponent } from './product/update-product/update-product.
     UserComponent,
     ProductComponent,
     AddProductComponent,
-    UpdateProductComponent
+    UpdateProductComponent,
+    SearchComponent,
+    UploadComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

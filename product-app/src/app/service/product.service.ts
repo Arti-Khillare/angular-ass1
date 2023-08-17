@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { createProduct } from '../app.interface';
+import { Observable} from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
@@ -91,4 +92,23 @@ export class ProductService {
   let requestOptions = { headers: headers };
   return this.http.delete(`http://localhost:3000/api/products/${_id}`, requestOptions)
   }
+
+  getdownloadCSV() {
+    return this.http.get(`http://localhost:3000/api/products/upload/product/`)
+  }
+
+  uploadCSV(file : any):Observable<any> {
+    let headers = new HttpHeaders({
+      'x-access-token': `${localStorage.getItem('token')}`,
+      'role' : `${localStorage.getItem('role')}`,
+      '_id' : `${localStorage.getItem('_id')}`
+    });
+  
+    console.warn(`${localStorage.getItem('_id')}`);
+    const formData = new FormData()
+    formData.append("file", file, file.name)
+    let requestOptions = { headers: headers };
+    return this.http.post(`http://localhost:3000/api/products/add`, formData, requestOptions)
+  }
+
 }
