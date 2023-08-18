@@ -1,0 +1,13 @@
+.card-content, .carousel-inner, .carousel-item, .img-thumbnail{
+    height : 30vh;
+}
+.card-content, .carousel-caption {
+    text-decoration: aqua;
+    color : rebeccapurple
+}
+.footer{
+    background-color: darkgrey;
+}
+.footer, .card-footer, .text-center{
+    text-decoration: aliceblue;
+}
