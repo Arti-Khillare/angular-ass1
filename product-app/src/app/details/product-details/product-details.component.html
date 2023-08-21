@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="container" >
+    <div class="text text-center">
+        <h2 class="text-uppercase my-5" style="font-weight: bold;">
+            Product details
+        </h2>
+    </div>
+    <div class="card mb-3">
+        <div class="row g-0">
+            <div class="col-xl-6 col-lg-6 col-md-6" style="border:1px solid #ddd">
+                <img class="img-fluid rounded-start" style="height:50vh" src="{{product?.productImage}}">
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6"style="border:1px solid #ddd">
+                <div class="card-body">
+                    <h2 class="card-title">{{product?.name}}</h2>
+                    <h3>Description  :  {{product?.description}}</h3>
+                    <h3>Published    :  {{product?.isPublished}}</h3>
+                    <h3>Price        :  ₹{{product?.price}} </h3>
+                    <h3>Rating       :  {{product?.rating}}</h3>
+                </div>
+                <div class="box">
+                    <button class="btn">Add to Cart</button>
+                    <button class="btn">Buy now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

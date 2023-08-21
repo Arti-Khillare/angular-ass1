@@ -3,31 +3,33 @@
 <head>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: sticky;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="home">ProductApp</a>
+      <a class="navbar-brand" style="font-weight:bold;font-size: larger;" href="home">ProductApp</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse" style="font-weight:bold; font-size: larger;" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" routerLink="/user-addproduct">Add-Product</a>
-            <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+            <a class="nav-link active"  aria-current="page" routerLink="">Home</a>
             <a class="nav-link" routerLink="/user-product">ProductList</a>
             <a class="nav-link" href="/admin-home">{{userName}}</a>
           </div>
       </div>
-      <div class="main">
-        <input type="search" placeholder="Search..." [(ngModel)]="searchText">
-        <fa-icon class="search-icon" (click)="getProductByName(productList.searchText)" [icon]="searchIcon"></fa-icon>
+      <div class="main" style="color:#686de0; background-color: white;">
+        <input type="search" placeholder="Enter product name to search" [(ngModel)]="searchText">
+        <fa-icon class="search-icon" (click)="getProductByName(queryName)" [icon]="searchIcon"></fa-icon>
       </div>
     </div>
   </nav>
   <div class="container-fluid table-responsive-sm">
-  <button class="btn btn-primary text-center" routerLink="/user-upload">UploadCsv</button>
-  <button class=" add btn btn-primary text-center" routerLink="/user-addproduct">+ Add Users</button>
+  <div class="buttons">
+  <button class="btn-f btn  text-center">Filter<fa-icon class="filter-icon" (click)="getPublishedProduct(queryPublished)" [icon]="filterIcon "></fa-icon></button>
+  <button class="btn1 btn btn-primary text-center" routerLink="/user-addproduct">+ AddProduct</button>
+  <button class="btn2 btn btn-info text-center" routerLink="/user-upload">UploadCsv</button>
+  </div>
   <p class="message-p">{{productMsg}}</p>
-  <table class="table table-light table-hover table-striped">
+  <table class="table table-light table-hover table-striped"style="font-weight:bold;" >
     <thead class="thead-light">
       <tr>
         <th scope="col">ProductImage</th>
@@ -41,8 +43,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let product of productList  | search : searchText">
-        <td><img src="{{product.productImage}}"/></td>
-        <td>{{product.name}}</td>
+        <td style="cursor: pointer;" [routerLink]="['/user-view-product/', product._id]" ><img src="{{product.productImage}}"/></td>
+        <td >{{product.name}}</td>
         <td>{{product.description}}</td>
         <td>{{product.isPublished}}</td>
         <td>{{product.price}}</td>

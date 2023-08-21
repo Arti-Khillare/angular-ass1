@@ -4,23 +4,25 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="home">ProductApp</a>
+    <div class="container-fluid" >
+      <a class="navbar-brand"style="font-weight:bold; font-size: larger" href="home">ProductApp</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
+          <div class="navbar-nav"style="font-weight:bold; font-size: larger">
             <a class="nav-link active" aria-current="page" routerLink="/admin-home">Home</a>
+            <a class="nav-link" routerLink="/user-product">ProductList</a>
             <a class="nav-link" href="#">{{userName}}</a>
-            <a class="btn btn-info" href="#" role="button" (click)="logout()">Logout</a>
+            <!--<a class="btn btn-info" href="#" role="button" (click)="logout()">Logout</a>-->
           </div>
       </div>
     </div>
+    <button class="right" (click)="logout()">Logout</button>
   </nav>
-  <div class="container-fluid table-responsive-sm">
-  <h3>Users <span>
-    <button class="btn btn-primary" routerLink="/admin-user">+ Add Users</button></span></h3>
+  <div class="container-fluid table-responsive-sm"style="font-weight:bold; font-size: large">
+  <h3>Users<span>
+    <button class="addbtn btn " routerLink="/admin-user">+ Add Users</button></span></h3>
   <p class="message-p">{{userMsg}}</p>
   <table class="table table-hover">
     <thead class="thead-light">

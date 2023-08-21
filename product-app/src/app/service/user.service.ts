@@ -75,29 +75,13 @@ export class UserService {
     return this.http.put<users>(`http://localhost:3000/api/users/${users._id}`, users, requestOptions)
   }
   
-}
-
-
-// deleteUser(_id: string) {
+  // getOne(_id : string){
   //   let headers = new HttpHeaders({
   //     'x-access-token': `${localStorage.getItem('token')}`,
-  //     'role' : `${localStorage.getItem('role')}`,
+  //     "role" : `${localStorage.getItem('role')}`,
   //     '_id' : `${localStorage.getItem('_id')}`
-  //   })
-  //   console.warn(`${localStorage.getItem('_id')}`);
-    
-  
-  //   let requestOptions = {headers : headers}
-  //   if(localStorage.getItem("user") ){
-  //   let id = `${localStorage.getItem('_id')}`
-  //   console.warn(_id)
-  //   if(_id == id){
-  //    this.http.delete(`http://localhost:3000/api/users/${_id}`, requestOptions)
-  //    console.warn("deleted")
-  //   }
-  //   else {
-  //     console.warn('check userid correct or not')
-  //   }
+  //   });
+  //   let requestOptions = { headers: headers };
+  //   return this.http.get(`http://localhost:3000/api/users/${_id}`, requestOptions)
   // }
-    
-  // }
+}

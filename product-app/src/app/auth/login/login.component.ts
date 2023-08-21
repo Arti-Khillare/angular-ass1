@@ -24,9 +24,6 @@ export class LoginComponent implements OnInit{
 
   signIn(data: signIn) : void {
       console.warn(data);
-      // if(!(data.email == "email") || (data.password == "password")){
-      // this.errorMessage = 'login failed checked email or password'
-      // }
       if(data) {
         this.user.loginUser(data)
       }

@@ -24,6 +24,8 @@ import { SearchPipe } from './search.pipe';
 import { 
    AuthGuard 
 } from './auth.guard';
+import { UserDetailsComponent } from './details/user-details/user-details.component';
+import { ProductDetailsComponent } from './details/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import {
     UpdateProductComponent,
     SearchComponent,
     UploadComponent,
-    SearchPipe
+    SearchPipe,
+    UserDetailsComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

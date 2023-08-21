@@ -13,6 +13,8 @@ import { AddProductComponent } from './product/add-product/add-product.component
 import { UpdateProductComponent } from './product/update-product/update-product.component';
 import { UploadComponent } from './upload/upload.component';
 import { AdminHomeModule } from './admin-home/admin-home/admin-home.module';
+import { ProductDetailsComponent } from './details/product-details/product-details.component';
+import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   { 
@@ -59,6 +61,10 @@ const routes: Routes = [
   {
     component : AddProductComponent,
     path : 'user-addproduct'
+  },
+  {
+    component : ProductDetailsComponent,
+    path : 'user-view-product/:id'
   },
   {
     component : UpdateProductComponent,
