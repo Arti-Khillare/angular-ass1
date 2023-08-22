@@ -2,8 +2,31 @@
 #btn1{
     margin-left: 20px;
 }
-#button1 {
-    margin-bottom:20px
+button .btn, #btn1{
+    font-size: 16px;
+    padding: 10px 18px;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius: 23px;
+    background-color: #736AFF;
+    color : black;
+}
+button .btn, #btn1:hover{
+    cursor: pointer;
+    color: white;
+}
+form .text-center button .btn, #Button1{
+    font-size: 16px;
+    padding: 6px 18px;
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif;
+    border-radius: 23px;
+    background-color: #ADD8E6
+}
+form .text-center button .btn, #Button1:hover{
+    cursor : pointer;
+    color : white;
+    background-color: #08A04B;
 }
 .container {
     display: flex;
@@ -15,6 +38,17 @@ input[type]{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.container .card {
+    width: 25rem; 
+    height: 50vh;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+.card-body{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
 .container, .card, .card-title{
     padding-bottom: 8px;
+}
+form{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }

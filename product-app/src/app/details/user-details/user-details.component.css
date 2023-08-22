@@ -1,0 +1,16 @@
+.container{
+    margin-top: -1rem;
+    width : 90vh;
+}
+.card {
+    margin-top: -1.2rem;
+    cursor: pointer;
+}
+
+.container .card {
+    padding: 18px 18px;
+}
+.container .card h3{
+    padding: 10px 12px;
+    align-items: center;
+}

@@ -22,3 +22,8 @@
 a {
     font-family: 'Roboto Condensed', sans-serif;
 }
+.active {
+    background: white;
+    color :blue;
+    border-bottom: 2px solid blue;
+}

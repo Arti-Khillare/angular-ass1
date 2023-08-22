@@ -106,3 +106,8 @@ input[type]{
 .filter-icon{
     color: #222f3e;
 }
+.active{
+    background: white;
+    color : blue;
+    border-bottom: 2px solid blue;
+}

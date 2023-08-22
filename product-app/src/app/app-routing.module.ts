@@ -15,6 +15,7 @@ import { UploadComponent } from './upload/upload.component';
 import { AdminHomeModule } from './admin-home/admin-home/admin-home.module';
 import { ProductDetailsComponent } from './details/product-details/product-details.component';
 import { SearchComponent } from './search/search.component';
+import { UserDetailsComponent } from './details/user-details/user-details.component';
 
 const routes: Routes = [
   { 
@@ -61,6 +62,11 @@ const routes: Routes = [
   {
     component : AddProductComponent,
     path : 'user-addproduct'
+  },
+  {
+    component : UserDetailsComponent,
+    path : 'admin-view-user/:id',
+    canActivate : [AuthGuard]
   },
   {
     component : ProductDetailsComponent,

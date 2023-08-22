@@ -4,7 +4,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 @Injectable()
 export class AuthService {
   constructor(public jwtHelper: JwtHelperService, 
-    private router: Router,) {}
+    private router: Router) {}
   // ...
   public isAuthenticated(): boolean {
     const token = localStorage.getItem('token');
@@ -16,4 +16,7 @@ export class AuthService {
     return !this.jwtHelper.isTokenExpired(token);
     
   }
+
+
+ 
 }
