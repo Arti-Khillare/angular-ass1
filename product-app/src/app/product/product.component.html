@@ -50,8 +50,7 @@
         <td>{{product.price}}</td>
         <td>{{product.rating}}</td>
         <td>
-          <a class="adjust-edit" href="javascript:void(0)" [routerLink]="['/user-edit-product',product._id]"><fa-icon [icon]="editIcon"></fa-icon></a> / 
-          <fa-icon class="adjust-delete"(click)="deleteProduct(product._id)" [icon]="icon"></fa-icon> 
+          <a class="adjust-edit" href="javascript:void(0)" [routerLink]="['/user-edit-product',product._id]"><fa-icon [icon]="editIcon"></fa-icon></a> /<fa-icon class="adjust-delete"(click)="deleteProduct(product._id)" [icon]="icon"></fa-icon> 
           <!--<fa-icon class="adjust-edit" (click)="getPublishedProduct(product.isPublished)" [icon]="filterIcon "></fa-icon> /
            <fa-icon class="adjust-edit" (click)="getProductByName(product.name)" [icon]="searchIcon "></fa-icon> -->
        </td>

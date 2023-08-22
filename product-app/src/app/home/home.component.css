@@ -11,6 +11,7 @@
 }
 .content h1{
     font-size: 40px;
+    font-weight: 800;
 }
 .content p{
     font-size:20px;
@@ -19,13 +20,16 @@
     margin-top: 2px;
     padding: 12px 20px;
     border:none;
-    background: gold;
+    background: rgb(186, 242, 126);
     color : black;
     font-size: 20px;
-    border-radius:18px;
+    font-weight: 400;
+    border-radius:25px;
 }
 .phead{
     margin-top: -3rem;
+    font-size: 40px;
+    font-weight: 600;
     text-align: center;
     color:#424144;
 }
@@ -45,6 +49,7 @@
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 20px;
+    cursor : pointer;
 }
 .products .card img{
     height: 270px;

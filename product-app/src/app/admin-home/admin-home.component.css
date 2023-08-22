@@ -9,7 +9,9 @@ a{
     color: blue;
     cursor: pointer;
 }
-
+nav .navbar .container-fluid{
+    box-shadow: 0 0 14px rgba(0,0,0,0.3);
+}
 nav button, .right {
     background-color: rgb(0, 157, 255);
     border-radius: 14px;
@@ -41,6 +43,7 @@ button.addbtn, .btn{
   float:right;
   border-radius: 15px;
   font-size: 18px;
+  margin-bottom: 1rem;
 }
 
 
@@ -77,7 +80,7 @@ table th, table td{
     color : #18dcff;
 }
 .adjust-delete {
-    color : #32ff7e;
+    color : black;
 }
 .adjust-edit:hover {
     color : #32ff7e;

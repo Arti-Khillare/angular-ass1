@@ -11,12 +11,8 @@
 .nav-link {
     color: black;
 }
-
 .container-fluid {
     background-color: whitesmoke;
-    position: sticky;
-    top:0%;
-    z-index: 999;
     box-shadow: 0 0 14px rgba(0,0,0,0.3);
 }
 a {
