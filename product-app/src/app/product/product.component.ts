@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {faTrash, faEdit, faFilter, faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import { createProduct } from '../app.interface';
 import { ProductService } from '../service/product.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -25,11 +25,12 @@ export class ProductComponent implements OnInit{
   queryPublished = ''
   data : any
 
-  constructor( private product : ProductService, private activatedRoute : ActivatedRoute) {
+  constructor( private product : ProductService, private activatedRoute : ActivatedRoute,  private router: Router) {
     this.activatedRoute.queryParams.subscribe(data => {
       this.queryName = data['name']
       this.queryPublished = data['isPublished']
       console.log(data)
+      
     })
   }
 
@@ -42,6 +43,7 @@ export class ProductComponent implements OnInit{
       console.log(data)
       if(data){
         this.productList=data.data;
+        //this.router.navigate(['/user-product'], { queryParams: { name: 'Product'} });
       }
     }) 
   }
@@ -52,6 +54,8 @@ export class ProductComponent implements OnInit{
       if(data){
         this.productList=data.data;
         this.productData=data.data;
+        
+       this.router.navigate(['/user-product'], { queryParams :{isPublished : true}})
       }
     })
   }
@@ -65,6 +69,9 @@ export class ProductComponent implements OnInit{
         this.productData=data.data
         console.log(this.data)
         console.log(this.productData)
+        
+      this.router.navigate(['/user-product'], { queryParams: { name: name} });
+      console.log(name)
       }
     })
   }

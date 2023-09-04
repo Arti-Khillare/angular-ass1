@@ -50,6 +50,7 @@ export class AdminHomeComponent implements OnInit{
 
   logout(){
     localStorage.clear()
+    console.warn(this.logout, "logout")
   }
 }
 

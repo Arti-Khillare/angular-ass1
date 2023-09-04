@@ -7,6 +7,7 @@ import { Observable} from 'rxjs'
   providedIn: 'root'
 })
 export class ProductService {
+  options: any;
 
   constructor(private http : HttpClient) { }
 
@@ -111,13 +112,5 @@ export class ProductService {
     return this.http.post(`http://localhost:3000/api/products/add`, formData, requestOptions)
   }
 
-  getOne(_id : string){
-    let headers = new HttpHeaders({
-      'x-access-token': `${localStorage.getItem('token')}`,
-      "role" : `${localStorage.getItem('role')}`,
-      '_id' : `${localStorage.getItem('_id')}`
-    });
-    let requestOptions = { headers: headers };
-    return this.http.get<createProduct>(`http://localhost:3000/api/products/${_id}`, requestOptions)
-  }
+ 
 }

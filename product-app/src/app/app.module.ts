@@ -26,6 +26,7 @@ import {
 } from './auth.guard';
 import { UserDetailsComponent } from './details/user-details/user-details.component';
 import { ProductDetailsComponent } from './details/product-details/product-details.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,6 @@ import { ProductDetailsComponent } from './details/product-details/product-detai
     ReactiveFormsModule,
     HttpClientModule,
     FontAwesomeModule,
-    
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

@@ -20,7 +20,7 @@ export class LoginService {
       console.warn(result);
       if(result ) {
         localStorage.setItem("user", JSON.stringify(result.data))
-        this.router.navigate(['admin-home'])
+        this.router.navigate(['/admin-home'])
       }
     })
   }

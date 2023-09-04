@@ -15,7 +15,7 @@ export class AdminAuthComponent implements OnInit {
   "email" : string;
   "password" : string;
   "role" : string;
-  constructor(private user : AdminService, private router : Router) {
+  constructor(private user : AdminService, private router : Router, ) {
 
   }
   ngOnInit():void{ }
@@ -28,5 +28,7 @@ export class AdminAuthComponent implements OnInit {
         this.router.navigate(['Home'])
       }
     })
+    
+    
   }
 }

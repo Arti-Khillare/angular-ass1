@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../service/user.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { signUp, users } from '../app.interface';
 
 @Component({
@@ -15,9 +15,10 @@ export class UserComponent implements OnInit {
   errorMessage: string = '';
   userMsg : undefined | string;
 
-  constructor(private user : UserService, private route : ActivatedRoute) {}
+  constructor(private user : UserService, private route : ActivatedRoute, private router : Router) {}
     
   ngOnInit() : void { 
+   
     let userId = this.route.snapshot.paramMap.get('id')
     console.warn(userId)
     userId && this.user.getUser(userId).subscribe((result:any)=> {
@@ -27,14 +28,18 @@ export class UserComponent implements OnInit {
       console.warn(result);
       console.warn(result.data._id)
     })
+    
   }
  
-
   update(data: users) {
     console.warn(data)
     if(this.userData){
       data._id = this.userData._id
     }
+    // if(`${localStorage.getItem('_id') != data._id}`){
+    //     this.router.navigate(['login']);
+    //     console.warn(data._id)
+    // }
     this.user.updateUser(data ).subscribe((result) => {
           console.warn(result)
           if(result){

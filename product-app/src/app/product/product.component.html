@@ -16,6 +16,9 @@
             <a class="nav-link" routerLink="/admin-home" routerLinkActive="active">{{userName}}</a>
           </div>
       </div>
+      <div class="buttons">
+      <button class="btn-f btn  text-center">Filter<fa-icon class="filter-icon" (click)="getPublishedProduct(queryPublished)" [icon]="filterIcon "></fa-icon></button>
+      </div>
       <div class="main" style="color:#686de0; background-color: white;">
         <input type="search" placeholder="Enter product name to search" [(ngModel)]="searchText">
         <fa-icon class="search-icon" routerLink="/user-product"  (click)="getProductByName(queryName)" [icon]="searchIcon"></fa-icon>
@@ -24,7 +27,7 @@
   </nav>
   <div class="container-fluid table-responsive-sm">
   <div class="buttons">
-  <button class="btn-f btn  text-center">Filter<fa-icon class="filter-icon" (click)="getPublishedProduct(queryPublished)" [icon]="filterIcon "></fa-icon></button>
+  <!--<button class="btn-f btn  text-center"><fa-icon class="filter-icon" (click)="getPublishedProduct(queryPublished)" [icon]="filterIcon ">Filter</fa-icon></button>-->
   <button class="btn1 btn btn-primary text-center" routerLink="/user-addproduct">+ AddProduct</button>
   <button class="btn2 btn btn-info text-center" routerLink="/user-upload">UploadCsv</button>
   </div>
