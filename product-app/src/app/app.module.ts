@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminAuthComponent } from './admin-auth/admin-auth.component';
 import { ErrorComponent } from './error/error.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { UserComponent } from './admin-home/user/user.component';
 import { ProductComponent } from './product/product.component';
@@ -28,6 +28,7 @@ import { UserDetailsComponent } from './details/user-details/user-details.compon
 import { ProductDetailsComponent } from './details/product-details/product-details.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AdminDashboardComponent } from './admin-home/admin-dashboard/admin-dashboard.component';
+import { ExampleInterceptorInterceptor } from './example-interceptor.interceptor';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,10 @@ import { AdminDashboardComponent } from './admin-home/admin-dashboard/admin-dash
     HttpClientModule,
     FontAwesomeModule,
   ],
-  providers: [AuthGuard],
+  providers: [{ 
+    provide: HTTP_INTERCEPTORS, useClass: ExampleInterceptorInterceptor, multi:true
+  },
+  AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -19,8 +19,8 @@ export class UserComponent implements OnInit {
     
   ngOnInit() : void { 
    
-    let userId = this.route.snapshot.paramMap.get('id')
-    // console.warn('getting ',userId)
+    let userId = this.route.snapshot.paramMap.get('id');
+
     userId && this.user.getUser(userId).subscribe((result:any)=> {
       let info = result.data
       console.log(info._id)
@@ -40,11 +40,12 @@ export class UserComponent implements OnInit {
     //     this.router.navigate(['login']);
     //     console.warn(data._id)
     // }
-    this.user.updateUser(data ).subscribe((result) => {
+    this.user.updateUser(data).subscribe((result) => {
           console.warn(result)
           if(result){
             this.userMsg = 'User updated successfully'
           }
+          this.router.navigate(['admin-home']);
     },);
     setTimeout(() => {
           this.userMsg=undefined
