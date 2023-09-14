@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('_id', userId);
         if (result) {
           localStorage.setItem('user', JSON.stringify(result.data));
+          this.user.resetHeader.next(1);
           this.router.navigate(['/admin-home']);
         }
       },

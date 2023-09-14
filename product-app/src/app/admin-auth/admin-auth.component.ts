@@ -25,7 +25,7 @@ export class AdminAuthComponent implements OnInit {
     this.user.signUpUser(data).subscribe((result) => {
       console.warn(result);
       if(result){
-        this.router.navigate(['Home'])
+        this.router.navigate(['home'])
       }
     })
     
