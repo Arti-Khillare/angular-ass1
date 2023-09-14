@@ -7,7 +7,7 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
   faLock = faLock;
@@ -28,15 +28,18 @@ export class LoginComponent implements OnInit {
     }
     this.user.loginUser(data).subscribe(
       (result: any) => {
-        localStorage.setItem('token', result.data.token);
-        localStorage.setItem('role', result.data.role);
-        localStorage.setItem('_id', result.data.userId);
-
+        const {token,role,userId} = result.data;
+        localStorage.setItem('token', token);
+        localStorage.setItem('role', role);
+        localStorage.setItem('_id', userId);
         if (result) {
           localStorage.setItem('user', JSON.stringify(result.data));
           this.router.navigate(['/admin-home']);
         }
-      }
+      },
+      (err:any)=>{console.log('Error is here :- ',err);
+      this.errorMessage= err.error.message;
+    }
     );
   }
 

@@ -1,7 +1,6 @@
 <body>
     <div *ngIf="showLogin" class="container">
         <div class="row">
-            <p class="emessage-p">{{errorMessage}}</p>
             <div class="col-lg-10 col-xl-9 mx-auto">
                 <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
                     <div class="card-body p-4 p-sm-5">
@@ -9,8 +8,9 @@
                             <fa-icon [icon]="faLock" class="fa-3x"></fa-icon>
                         </div>-->
                         <h5 class="card-title text-center mb-5 fw-bold fs-5">SignIn</h5>
+                        <p class="emessage-p">{{errorMessage}}</p>
                         <!--<p style="color:lightslategray; text-align: center; ">Please, Enter your login details</p>-->
-                        <form  #userLogin="ngForm" (ngSubmit)="signIn(userLogin.value)" *ngIf="!errorMessage">
+                        <form  #userLogin="ngForm" (ngSubmit)="signIn(userLogin.value)" >
                             <div class="form-floating mb-3">
                                 <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@mail.com"   name="email" [(ngModel)]="email" required #floatingInputEmail="ngModel" >
                                 <label for="floatingInputEmail" >Email address</label>
