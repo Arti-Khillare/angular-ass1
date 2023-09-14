@@ -18,6 +18,7 @@
             <a class="nav-link " aria-current="page" routerLink="/home" routerLinkActive="active">Home</a>
             <a class="nav-link" routerLink="/admin-home" routerLinkActive="active">UsersList</a>
             <a class="nav-link" href="#">{{userName}}</a>
+           
             <a class="nav-link"  href="javascript:void(0);" (click)="logOut()" >Logout</a>
           </div>
           <div class="navbar-nav" *ngSwitchCase="'user'">

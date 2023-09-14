@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../service/user.service';
+import { UserService } from '../../service/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { signUp, users } from '../app.interface';
+import { signUp, users } from '../../app.interface';
 
 @Component({
   selector: 'app-user',
@@ -20,7 +20,7 @@ export class UserComponent implements OnInit {
   ngOnInit() : void { 
    
     let userId = this.route.snapshot.paramMap.get('id')
-    console.warn(userId)
+    // console.warn('getting ',userId)
     userId && this.user.getUser(userId).subscribe((result:any)=> {
       let info = result.data
       console.log(info._id)

@@ -13,7 +13,7 @@ import { ErrorComponent } from './error/error.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
-import { UserComponent } from './user/user.component';
+import { UserComponent } from './admin-home/user/user.component';
 import { ProductComponent } from './product/product.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddProductComponent } from './product/add-product/add-product.component';
@@ -27,6 +27,7 @@ import {
 import { UserDetailsComponent } from './details/user-details/user-details.component';
 import { ProductDetailsComponent } from './details/product-details/product-details.component';
 import { ToastrModule } from 'ngx-toastr';
+import { AdminDashboardComponent } from './admin-home/admin-dashboard/admin-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ToastrModule } from 'ngx-toastr';
     UploadComponent,
     SearchPipe,
     UserDetailsComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    AdminDashboardComponent
   ],
   imports: [
     BrowserModule,

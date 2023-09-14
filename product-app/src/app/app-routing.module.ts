@@ -5,7 +5,7 @@ import { AdminAuthComponent } from './admin-auth/admin-auth.component';
 import { ErrorComponent } from './error/error.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
-import { UserComponent } from './user/user.component';
+import { UserComponent } from './admin-home/user/user.component';
 import {  AuthGuard } from './auth.guard';
 import { ProductComponent } from './product/product.component';
 import { AddProductComponent } from './product/add-product/add-product.component';
@@ -40,11 +40,6 @@ const routes: Routes = [
   {
     path : 'admin-home',
     loadChildren : () => import('./admin-home/admin-home/admin-home.module').then((adm) => adm.AdminHomeModule),
-    canActivate : [AuthGuard]
-  },
-  {
-    component : UserComponent,
-    path : 'admin-edit-user/:id',
     canActivate : [AuthGuard]
   },
   {
