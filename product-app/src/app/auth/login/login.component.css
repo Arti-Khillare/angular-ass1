@@ -2,8 +2,14 @@ body {
     height : 100vh;
     background: linear-gradient(to right, #3e8ef6, #a9d8f8);
 }
+
 .container {
-    width : 35%;
+    width : 80%;
+}
+@media screen and (min-width: 768px){
+    .container {
+        width : 35%;
+    }
 }
 .btn-login {
     font-size: 0.9rem;

@@ -1,0 +1,101 @@
+a{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.navbar-brand {
+    color : blueviolet
+}
+
+.nav-link:hover {
+    color: blue;
+    cursor: pointer;
+}
+nav .navbar .container-fluid{
+    box-shadow: 0 0 14px rgba(0,0,0,0.3);
+}
+nav button, .right {
+    background-color: rgb(0, 157, 255);
+    border-radius: 14px;
+    border-width: 0;
+    box-shadow: rgba(42, 246, 154, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+    color: white;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration:solid;
+    height: 35px;
+    padding: 0 15px;
+    transition: all 200ms;
+    margin-right: 0.8rem;
+    float : right
+}.right:hover{
+background-color: blue;
+transform: scale(1.05)
+}
+button.addbtn, .btn{
+  background-color: #18dcff;
+  color : white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-decoration:solid;
+  height: 35px;
+  transition: all 200ms;
+  float:right;
+  border-radius: 15px;
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+
+button.addbtn:hover {
+  color : #40739e;
+  background-color: aqua;
+  transform: scale(1.05);
+}
+
+
+.container-fluid, .table, table {
+    text-align: left;
+    border-collapse: collapse
+}
+
+.table, table th , table td {
+    font-family: 'Poppins', sans-serif;
+    padding : 10px;
+    min-width: 150px;
+}
+table th, table td{
+    width : 80px;
+}
+.table, table th {
+    text-align: center;
+}
+
+.message-p {
+    color : red;
+}
+
+.adjust-edit {
+    margin-left: 10px;
+    color : #18dcff;
+}
+.adjust-delete {
+    color : black;
+}
+.adjust-edit:hover {
+    color : #32ff7e;
+}
+.adjust-delete:hover {
+    color : red;
+}
+
+.container-fluid button {
+   margin-left: 70rem;
+   border: #c7ecee;
+}
+
+.active{
+    background: white;
+    color : blue;
+    border-bottom: 2px solid blue;
+}

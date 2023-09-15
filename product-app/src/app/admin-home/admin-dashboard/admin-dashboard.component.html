@@ -1,0 +1,29 @@
+<div class="container-fluid table-responsive-sm">
+    <h3> <span>
+      <button class="addbtn btn " routerLink="/admin-user">+ Add Users</button></span></h3>
+    <p class="message-p">{{userMsg}}</p>
+    <table class="table table-light table-hover table-striped"style="font-weight:bold;">
+      <thead class="thead-light table-info">
+        <tr >
+          <th style="width: 10%;" scope="col">#</th>
+          <th scope="col">Username</th>
+          <th scope="col">Email</th>
+          <th scope="col">Role</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userList; let i= index; ">
+          <td>{{i+1}}</td>
+          <td style="cursor: pointer;" [routerLink]="['/admin-view-user/', user._id]" >{{user.fname}} {{user.lname}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.role}}</td>
+          <td><a class="adjust-edit" href="javascript:void(0)" [routerLink]="['/admin-home/admin-edit-user',user._id]"><fa-icon [icon]="editIcon"></fa-icon></a> / 
+            <fa-icon class="adjust-delete" (click)="deleteUser(user._id)" [icon]="icon"></fa-icon> 
+         </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
